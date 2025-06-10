@@ -1,3 +1,17 @@
-# Apply the same caching policy for all specified file types
-/*.(css|js|mtn|png|moc)
+# _headers
+
+# 对所有 /model/ 目录下的文件设置1年的浏览器缓存和CDN缓存
+/model/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Apply the same caching policy for all specified file types
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.mtn
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.moc
+  Cache-control: public, max-age=31536000, immutable
